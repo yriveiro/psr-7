@@ -1,0 +1,19 @@
+{
+    "name": "yriveiro/psr-7",
+    "description": "PSR-7 HTTP message library implementation",
+    "authors": [
+        {
+            "name": "Yago Riveiro",
+            "email": "yago.riveiro@gmail.com"
+        }
+    ],
+    "require": {
+        "psr/http-message": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.8.16",
+        "symfony/console": "^2.7",
+        "symfony/process": "^2.7",
+        "fabpot/php-cs-fixer": "^1.10"
+    }
+}
