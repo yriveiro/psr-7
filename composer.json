@@ -15,5 +15,11 @@
         "symfony/console": "^2.7",
         "symfony/process": "^2.7",
         "fabpot/php-cs-fixer": "^1.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "yriveiro\\Psr7\\": "src"
+        },
+        "files": ["src/functions_include.php"]
     }
 }
