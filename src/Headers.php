@@ -156,6 +156,24 @@ class Headers implements HeadersInterface
     }
 
     /**
+     * Prepend an item at the beginning of collection.
+     *
+     * @param  mixed  $key
+     * @param  mixed  $value
+     * @return $this
+     */
+    public function prepend($key, $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+
+        $this->items += [$key, $value];
+
+        return $this;
+    }
+
+    /**
      * Determine if an item exists in the collection by key.
      *
      * @param  mixed  $key
