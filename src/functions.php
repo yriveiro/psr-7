@@ -10,6 +10,13 @@ function normalize($key)
 
 function is_array_strings($values)
 {
+    if (!is_array($values)) {
+        throw new InvalidArgumentException(sprintf(
+            'is_array_strings() expects parameter 1 to be array, %s given',
+            Psr7\type($values)
+        ));
+    }
+
     return array_reduce($values, function ($carry, $item) {
         return (!is_string($item)) ? false : $carry;
     }, true);
